@@ -1,0 +1,23 @@
+.todo-wrapper 
+{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+button 
+{
+    background-color: brown;
+    border: none;
+    border-radius: 7px;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-weight: 700;
+}
+input [ type = "checkbox" ] 
+{
+    width: 3em;
+    height: 3rem;
+    accent-color: pink;
+}
