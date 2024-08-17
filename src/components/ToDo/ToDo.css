@@ -1,23 +1,30 @@
 .todo-wrapper 
 {
-    margin-top: 15px;
+    margin-top: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 6px;
 }
 button 
 {
-    background-color: brown;
+    width: 6rem;
+    height: 3rem;
+    background-color: red;
     border: none;
-    border-radius: 7px;
+    border-radius: 5px;
     padding: 0.5rem 1rem;
     color: white;
     font-weight: 700;
 }
-input [ type = "checkbox" ] 
+    button:hover
+    {
+        background-color: rgb(194, 6, 6);
+        color: yellow;
+    }
+input[ type = "checkbox" ] 
 {
-    width: 3em;
-    height: 3rem;
-    accent-color: pink;
+    width: 26px;
+    height: 26px;
+    color: pink;
 }

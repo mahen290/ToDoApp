@@ -1,24 +1,14 @@
 import React from 'react';
-
-const list = [
-    { id: 1, todoData: 'todo1' },
-    { id: 2, todoData: 'todo2' }
-];
+import ToDo from './ToDo';
      
-function TodoList() 
+function TodoList({ list }) 
 {
   return (
     <div>
       {
-        list.length > 0 && list.map( (todo) => <toDo_data key = { todo.id } todoData = { todo.todoData } />)
+        list.length > 0 && list.map((todo) => <ToDo key = { todo.id } ToDoData = { todo.tododata } />)
       }
     </div>
   );
 }
-
 export default TodoList;
-    
-
-
-
-

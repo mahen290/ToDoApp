@@ -1,0 +1,34 @@
+.add-wrapper 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 50px;
+}
+.input 
+{
+    width: 440px;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+}
+.AddToDoBtn
+{
+    width: 9rem;
+    height: 3rem;
+    background-color: rgb(41, 180, 245);
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    color: blue;
+    font-size: 16px;
+    font-weight: bolder;
+}
+    .AddToDoBtn:hover
+    {
+        background-color: rgb(5, 95, 168);
+        color: yellow;
+        cursor: pointer;
+    }

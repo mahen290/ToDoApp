@@ -1,12 +1,12 @@
 import React from 'react';
 import './ToDo.css';
 
-function ToDo({ toDo_data }) 
+function ToDo({ ToDoData }) 
 {
   return (
     <div className = "todo-wrapper">
         <input type = "checkbox" />
-            <h2> { toDo_data } </h2>
+          <h2> { ToDoData } </h2>
         <button> Edit </button>
         <button> Delete </button>
     </div>
