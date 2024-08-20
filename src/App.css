@@ -4,8 +4,8 @@ h1
     height: 20vh;
     padding: 2.5rem;
     background: linear-gradient(rgb(245, 189, 198), rgb(190, 91, 247));
-    color: blue;
-    text-shadow: 1px 1px 1px black;
+    color: black;
+    text-shadow: 1px 1px 1px red;
     text-align: center;
     font-weight: bolder;
     letter-spacing: 2px;
@@ -24,14 +24,13 @@ h1
 }
 .toDo_Heading
 {
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
+    margin: 3rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36px;
+    font-size: 35px;
     font-weight: bolder;
-    color: orange;
-    text-shadow: 1px 1px 1px blue;
+    color: blue;
+    text-shadow: 1px 1px 1px black;
     letter-spacing: 3px;
 }
