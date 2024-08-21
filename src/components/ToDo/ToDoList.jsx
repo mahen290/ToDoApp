@@ -7,8 +7,7 @@ function TodoList({ list, setList })
     <div>
       {
         list.length > 0 && list.map( (todo) => 
-        <ToDo>
-          key = { todo.id } 
+        <ToDo key = { todo.id }>
           id = { todo.id } 
           ToDoData = { todo.tododata } 
           isFinished = { todo.finished }
@@ -16,8 +15,7 @@ function TodoList({ list, setList })
           changeFinished = { ( isFinished ) => {
             console.log("isFinished", isFinished);
 
-            const updatedList = list.map( (t) => 
-            {
+            const updatedList = list.map( (t) => {
               if(t.id === todo.id) 
               {
                 todo.finished = isFinished
@@ -26,10 +24,9 @@ function TodoList({ list, setList })
             }
           )
             setList(updatedList);
-          }
-        }
+          }}
         </ToDo>
-      )
+        )
       }
     </div>
   );
