@@ -2,17 +2,33 @@ import React from 'react';
 import { useState } from 'react';
 import './ToDo.css';
 
-function ToDo({ ToDoData, isFinished, changeFinished }) 
-{
-  const [ finished, setFinished ] = useState(isFinished);
+function ToDo({ ToDoData, isFinished, changeFinished, onDelete, onEdit }) {
+
+  const [finished, setFinished] = useState(isFinished);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editText, setEditText] = useState(ToDoData);
+
   return (
-    <div className = "todo-wrapper">
-        <input type = "checkbox" checked = { finished } onChange = { (event) => { 
-          setFinished(event.target.checked)         
-          changeFinished(event.target.checked) } } />
-        <h2> { ToDoData } </h2>
-        <button> Edit </button>
-        <button> Delete </button>
+
+    <div className="todo-wrapper">
+
+      <input type="checkbox" checked={finished} onChange={(event) => {
+        setFinished(event.target.checked)
+        changeFinished(event.target.checked)
+      }} />
+
+      <h2> {(isEditing) ? <input type="text" value={editText}
+        onChange={(event) => setEditText(event.target.value)} /> :
+        <span> {ToDoData} </span>} 
+      </h2>
+
+      <button onClick={() => {
+        setIsEditing(!isEditing);
+        onEdit(editText);
+      }}> {(!isEditing) ? 'Edit' : 'Save'} </button>
+
+      <button onClick={onDelete}>Delete</button>
+
     </div>
   );
 }
