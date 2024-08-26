@@ -9,7 +9,7 @@ function App()
 {
   const [ list, setList ] = useState( [ 
     { id: 1, tododata: 'Take Tea', finished: false }, 
-    { id: 2, tododata: 'Go To Gym', finished: true } 
+    { id: 2, tododata: 'Go To Gym', finished: false } 
   ] );
 
   return (
