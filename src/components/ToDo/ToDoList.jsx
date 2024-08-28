@@ -32,7 +32,7 @@ function ToDoList()
           <ToDo 
             key = { todo.id }
             id = { todo.id }
-            ToDoData = { todo.tododata }
+            tododata = { todo.tododata }
 
             isFinished = { todo.finished }
             changeFinished = { (isFinished) => onFinished(todo, isFinished) }

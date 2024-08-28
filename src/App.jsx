@@ -13,6 +13,7 @@ function App()
   //   { id: 1, tododata: 'Take Tea', finished: false }, 
   //   { id: 2, tododata: 'Go To Gym', finished: false } 
   // ] );
+  
   const [ list, dispatch ] = useReducer(ToDoReducer, []);
 
   return (
