@@ -3,12 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     margin-top: 50px;
 }
 .input 
 {
-    width: 440px;
+    width: 500px;
     height: 3rem;
     padding: 1rem;
     border-radius: 10px;
@@ -16,13 +16,12 @@
 }
 .AddToDoBtn
 {
-    width: 9rem;
-    height: 3rem;
+    width: 9.5rem;
+    height: 3.3rem;
     background-color: rgb(41, 180, 245);
     border: none;
     border-radius: 10px;
-    padding: 1rem;
-    color: blue;
+    padding: 1.2rem;
     font-size: 16px;
     font-weight: bolder;
 }

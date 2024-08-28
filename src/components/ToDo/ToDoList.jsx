@@ -2,12 +2,28 @@ import React from 'react';
 import ToDo from './ToDo';
 import { useContext } from 'react';
 import ToDoContext from '../../context/ToDoContext';
+import ToDoDispatchContext from "../../context/ToDoDispatchContext";
 
 
 function ToDoList() 
 {
+    const { list } = useContext(ToDoContext);
+    const { dispatch } = useContext(ToDoDispatchContext);
 
-  const { list, setList } = useContext(ToDoContext);
+    function onFinished(todo, isFinished)
+    {
+      dispatch( { type: 'finish_todo', payload: { todo, isFinished: isFinished } } );
+    }
+
+    function onDelete(todo) 
+    {
+      dispatch( { type: 'delete_todo', payload: { todo } } );
+    }
+
+    function onEdit(todo, todoText) 
+    {
+      dispatch( { type: 'edit_todo', payload: { todo, todoText } } );
+    }
 
   return (
 
@@ -19,39 +35,13 @@ function ToDoList()
             key = { todo.id }
             id = { todo.id }
             ToDoData = { todo.tododata }
+
             isFinished = { todo.finished }
-
-            changeFinished = { (isFinished) => {
-              console.log("isFinished", isFinished);
-
-            const updatedList = list.map( (t) => {
-                if (t.id == todo.id) 
-                {
-                  todo.finished = isFinished
-                }
-                return t;
-              })
-              setList(updatedList);
-            }}
-
-            onDelete = {() => {
-              const updatedList = list.filter( t => t.id != todo.id );
-              setList(updatedList);
-            }}
-
-            onEdit = { (todoText) => {
-              const updatedList = list.map( (t) => {
-                if (t.id == todo.id) 
-                {
-                  todo.tododata = todoText;
-                }
-                return t;
-              })
-              setList(updatedList)
-            }}
-
-          />
-        )
+            changeFinished = { (isFinished) => onFinished(todo, isFinished) }
+            
+            onDelete = { () => { onDelete(todo) } } 
+            onEdit = { (todoText) => onEdit(todo, todoText) }
+          />)
       }
     </div>
   );
