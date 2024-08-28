@@ -4,7 +4,6 @@ import { useContext } from 'react';
 import ToDoContext from '../../context/ToDoContext';
 import ToDoDispatchContext from "../../context/ToDoDispatchContext";
 
-
 function ToDoList() 
 {
     const { list } = useContext(ToDoContext);
@@ -28,7 +27,6 @@ function ToDoList()
   return (
 
     <div>
-
       {
         list.length > 0 && list.map( (todo) =>
           <ToDo 
@@ -46,5 +44,4 @@ function ToDoList()
     </div>
   );
 }
-
 export default ToDoList;

@@ -17,9 +17,9 @@ function ToDo({ ToDoData, isFinished, changeFinished, onDelete, onEdit }) {
         changeFinished(event.target.checked)
       }} />
 
-      <h2> {(isEditing) ? <input type = "text" value = {editText}
-        onChange = {(event) => setEditText(event.target.value)} /> :
-        <span> { ToDoData } </span>} 
+      <h2> { (isEditing) ? <input type = "text" value = { editText }
+        onChange = { (event) => setEditText(event.target.value) } /> :
+        <span> { ToDoData } </span> } 
       </h2>
 
       <button onClick = {() => {

@@ -9,12 +9,10 @@ import ToDoReducer from "./reducers/ToDoReducer";
 
 function App() 
 {
-
   // const [ list, setList ] = useState( [ 
   //   { id: 1, tododata: 'Take Tea', finished: false }, 
   //   { id: 2, tododata: 'Go To Gym', finished: false } 
   // ] );
-
   const [ list, dispatch ] = useReducer(ToDoReducer, []);
 
   return (
@@ -33,5 +31,4 @@ function App()
     </div>
   )
 };
-
 export default App;
