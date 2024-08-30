@@ -1,27 +1,25 @@
 import React from 'react';
 import ToDo from './ToDo';
-import { useContext } from 'react';
-import ToDoContext from '../../context/ToDoContext';
-import ToDoDispatchContext from "../../context/ToDoDispatchContext";
+import { useSelector } from "react-redux";
 
-function ToDoList() 
+function ToDoList( { finishedToDo, editToDo, deleteToDo } ) 
 {
-    const { list } = useContext(ToDoContext);
-    const { dispatch } = useContext(ToDoDispatchContext);
+  
+  const list = useSelector( (state) => state.todo);
 
-    function onFinished(todo, isFinished)
+    function onFinished(todo, isFinished) 
     {
-      dispatch( { type: 'finish_todo', payload: { todo, isFinished: isFinished } } );
-    }
-
-    function onDelete(todo) 
-    {
-      dispatch( { type: 'delete_todo', payload: { todo } } );
+      finishedToDo(todo, isFinished);
     }
 
     function onEdit(todo, todoText) 
     {
-      dispatch( { type: 'edit_todo', payload: { todo, todoText } } );
+      editToDo(todo, todoText);
+    }
+
+    function onDelete(todo) 
+    {
+      deleteToDo(todo);
     }
 
   return (
@@ -32,16 +30,18 @@ function ToDoList()
           <ToDo 
             key = { todo.id }
             id = { todo.id }
-            tododata = { todo.tododata }
-
+            todoData = { todo.todoData }
             isFinished = { todo.finished }
             changeFinished = { (isFinished) => onFinished(todo, isFinished) }
-            
             onDelete = { () => { onDelete(todo) } } 
             onEdit = { (todoText) => onEdit(todo, todoText) }
-          />)
+          />
+        )
       }
     </div>
+
   );
+
 }
+
 export default ToDoList;
