@@ -2,9 +2,10 @@ import React from 'react';
 import './App.css';
 import ToDoList from './components/ToDo/ToDoList';
 import AddToDo from './components/AddToDo/AddToDo';
+
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
-import { addTodo, deleteTodo, editTodo, finishedTodo } from "./actions/ToDoActions";
+import { addTodo, editTodo, deleteTodo, finishedTodo } from './slices/ToDoSlices';
 
 function App() 
 {
@@ -14,14 +15,14 @@ function App()
   // ] );
   
   const dispatch = useDispatch();
-  const actions = bindActionCreators({ addTodo, editTodo, deleteTodo, finishedTodo }, dispatch);
+  const actions = bindActionCreators( { addTodo, editTodo, deleteTodo, finishedTodo }, dispatch);
 
   return (
     <div>
-      <h1 className="heading"> My ToDo App With UseContext And Redux </h1>
+      <h1 className = "heading"> My ToDo App With UseContext And Redux </h1>
         <div className = "toDo_Container">
           <h2 className = "toDo_Heading"> My ToDo Application </h2>
-          <hr size = "1" color = "indigo" />
+          <hr className = "h-rule" size = "1" color = "white" />
         </div>
         <AddToDo addTodo = { actions.addTodo } />
         <ToDoList 
@@ -31,5 +32,7 @@ function App()
         />
     </div>
   )
+
 };
+
 export default App;

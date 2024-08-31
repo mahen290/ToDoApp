@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AddToDo.css';
-import { useState } from "react";
 
 function AddToDo({ addTodo }) 
 {
@@ -20,9 +19,10 @@ function AddToDo({ addTodo })
       <button 
         className = "AddToDoBtn" 
         onClick = { () => { 
-          addTodo(inputItem);
-          setInputItem(''); }}
-      > Add New ToDo </button>
+          addTodo({ todoText: inputItem });
+          setInputItem(''); }}> 
+          Add New ToDo 
+      </button>
     </div>
   );
 

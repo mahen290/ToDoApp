@@ -1,12 +1,14 @@
 h1
 {
     width: 100%;
-    height: 20vh;
-    padding: 2.5rem;
+    height: 33vh;
+    padding: 4.5rem 4rem;
     background: linear-gradient(rgb(245, 189, 198), rgb(190, 91, 247));
+    border-bottom: 1px solid white;
     color: black;
-    text-shadow: 1px 1px 1px red;
+    text-shadow: 1px 1px 1px black;
     text-align: center;
+    font-size: 44px;
     font-weight: bolder;
     letter-spacing: 2px;
 }
@@ -24,7 +26,7 @@ h1
 }
 .toDo_Heading
 {
-    margin: 3rem auto;
+    margin: 5rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,4 +35,10 @@ h1
     color: blue;
     text-shadow: 1px 1px 1px black;
     letter-spacing: 3px;
+}
+.h-rule
+{
+    width: 81%;
+    margin: 5rem auto;
+    
 }
