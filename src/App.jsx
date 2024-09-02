@@ -20,8 +20,8 @@ function App()
   return (
     <div>
       <h1 className = "heading"> My ToDo App With UseContext And Redux </h1>
-        <div className = "toDo_Container">
-          <h2 className = "toDo_Heading"> My ToDo Application </h2>
+        <div className = "todo_container">
+          <h2 className = "todo_heading"> My ToDo Application </h2>
           <hr className = "h-rule" size = "1" color = "white" />
         </div>
         <AddToDo addTodo = { actions.addTodo } />

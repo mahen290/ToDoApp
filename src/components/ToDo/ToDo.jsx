@@ -26,9 +26,10 @@ function ToDo({ todoData, isFinished, changeFinished, onEdit, onDelete }) {
       </h2>
 
       <button onClick = {() => {
-        setIsEditing(!isEditing);
-        onEdit(editText);
-      }}> {(!isEditing) ? 'Edit' : 'Save'} </button>
+          setIsEditing(!isEditing);
+          onEdit(editText);
+        }}> {(!isEditing) ? 'Edit' : 'Save'} 
+      </button>
 
       <button onClick={onDelete}> Delete </button>
 
