@@ -38,11 +38,11 @@ h1
 }
     .todo_heading:hover
     {
-        border-top-left-radius: 105px;
-        border-top-right-radius: 105px;
-        color: orange;
+        border-top-left-radius: 117px;
+        border-top-right-radius: 117px;
+        color: red;
         background: linear-gradient(rgb(35, 120, 131),rgb(2, 181, 194));
-        transition-duration: 1s;
+        transition-duration: 0.75s;
     }
 .h-rule
 {

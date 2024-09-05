@@ -6,6 +6,7 @@ import AddToDo from './components/AddToDo/AddToDo';
 import { useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addTodo, editTodo, deleteTodo, finishedTodo } from './slices/ToDoSlices';
+import { Toaster } from 'react-hot-toast';
 
 function App() 
 {
@@ -30,9 +31,9 @@ function App()
           deleteToDo = { actions.deleteTodo } 
           finishedToDo = { actions.finishedTodo } 
         />
+      <Toaster />
     </div>
   )
-
 };
 
 export default App;
